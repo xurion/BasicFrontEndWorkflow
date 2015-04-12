@@ -1,0 +1,1 @@
+window.onload=function(){"use strict";var a=document.createElement("div");a.className="demo",document.body.appendChild(a)};

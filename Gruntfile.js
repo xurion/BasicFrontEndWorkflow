@@ -24,7 +24,7 @@ module.exports = function (grunt) {
                 files: [
                     {
                         expand: true,
-                        src: ['src/**/*.js'],
+                        src: ['src/js/**/*.js'],
                         dest: 'dist/js/',
                         filter: 'isFile',
                         flatten: true
@@ -41,7 +41,7 @@ module.exports = function (grunt) {
         uglify: {
             main: {
                 files: {
-                    'dist/main.js': ['dist/**/*.js']
+                    'dist/js/main.js': ['dist/js/**/*.js']
                 }
             }
         },
@@ -76,7 +76,7 @@ module.exports = function (grunt) {
             }
         },
         watch: {
-            files: ['*', 'tasks/**/*', 'src/**/*'],
+            files: ['*', 'src/**/*'],
             tasks: ['build']
         }
     });
