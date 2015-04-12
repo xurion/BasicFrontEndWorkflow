@@ -76,7 +76,7 @@ module.exports = function (grunt) {
             }
         },
         watch: {
-            files: ['*', 'tasks/**/*', 'src/**/*'],
+            files: ['*', 'src/**/*'],
             tasks: ['build']
         }
     });

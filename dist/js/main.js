@@ -1,1 +1,1 @@
-window.onload=function(){"use strict";var a,b,c={c:"c",cc:"cc"};for(b in c)c.hasOwnProperty(b)&&b&&1===b&&(a=b);return"a"===a};
+window.onload=function(){"use strict";var a=document.createElement("div");a.className="demo",document.body.appendChild(a)};
