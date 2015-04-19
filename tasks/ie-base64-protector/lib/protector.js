@@ -13,7 +13,8 @@ module.exports.protect = function (file, selectorPrefix) {
         j,
         k,
         newSelectors,
-        newStyles;
+        imageUrl,
+        newStyles = '';
 
     //grunt.verbose.write('Parsing ' + file);
 
@@ -40,7 +41,8 @@ module.exports.protect = function (file, selectorPrefix) {
                         }
 
                         newSelectors = newSelectors.substr(0, newSelectors.length - 1);
-                        newStyles = newStyles + newSelectors + '{' + css[i].declarations[j].property + ':' + css[i].declarations[j].value + ';/*ImageEmbed:skip*/' + '}';
+                        imageUrl = /url\((.+)\)/.exec(css[i].declarations[j].value)[0];
+                        newStyles = newStyles + newSelectors + '{background-image:' + imageUrl + ';/*ImageEmbed:skip*/}';
                     }
                 }
             }
