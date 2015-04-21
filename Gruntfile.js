@@ -75,15 +75,10 @@ module.exports = function (grunt) {
             files: {
                 '.lt-ie8': 'dist/css/demo.css'
             }
-        },
-        watch: {
-            files: ['*', 'src/**/*'],
-            tasks: ['build']
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-jslint');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
