@@ -41,15 +41,15 @@ module.exports = function (grunt) {
         uglify: {
             main: {
                 files: {
-                    'dist/js/main.js': ['dist/js/**/*.js']
+                    'dist/js/demo.min.js': ['dist/js/demo.js']
                 }
             }
         },
         clean: ['dist'],
         imageEmbed: {
             dist: {
-                src: ['dist/css/main.css'],
-                dest: 'dist/css/main.css',
+                src: ['dist/css/demo.css'],
+                dest: 'dist/css/demo.css',
                 options: {
                     deleteAfterEncoding: false
                 }
@@ -58,7 +58,7 @@ module.exports = function (grunt) {
         less: {
             production: {
                 files: {
-                    'dist/css/main.css': 'src/css/main.less'
+                    'dist/css/demo.css': 'src/css/demo.less'
                 }
             }
         },
@@ -66,23 +66,19 @@ module.exports = function (grunt) {
             target: {
                 files: [{
                     expand: true,
-                    src: ['dist/css/*.css']
+                    src: ['dist/css/demo.css'],
+                    ext: '.min.css'
                 }]
             }
         },
         'ieBase64Protector': {
             files: {
-                '.lt-ie8': 'dist/css/main.css'
+                '.lt-ie8': 'dist/css/demo.css'
             }
-        },
-        watch: {
-            files: ['*', 'src/**/*'],
-            tasks: ['build']
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-jslint');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
@@ -90,7 +86,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-image-embed');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadTasks('tasks/ie-base64-protector');
+    grunt.loadNpmTasks('ie-base64-protector');
 
     grunt.registerTask('build', [
         'jshint',
