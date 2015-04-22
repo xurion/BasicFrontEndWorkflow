@@ -86,7 +86,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-image-embed');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadTasks('tasks/ie-base64-protector');
+    grunt.loadNpmTasks('ie-base64-protector');
 
     grunt.registerTask('build', [
         'jshint',

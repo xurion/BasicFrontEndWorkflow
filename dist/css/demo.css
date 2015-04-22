@@ -6,4 +6,4 @@ body .demo {
   height: 200px;
   margin: 100px;
 }
-.lt-ie8 body .demo{background-image:url('images/image.png');/*ImageEmbed:skip*/}
+.lt-ie8 body .demo{background:url('images/image.png') no-repeat center;/*ImageEmbed:skip*/}
