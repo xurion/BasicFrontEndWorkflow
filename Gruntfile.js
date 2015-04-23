@@ -6,14 +6,14 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         jshint: {
-            files: ['Gruntfile.js', 'src/**/*.js'],
+            files: ['Gruntfile.js', 'src/**/*.js', 'tests/**/*.js'],
             options: {
                 jshintrc: '.jshintrc'
             }
         },
         jslint: {
             client: {
-                src: ['Gruntfile.js', 'src/**/*.js'],
+                src: ['Gruntfile.js', 'src/**/*.js', 'tests/**/*.js'],
                 directives: {
                     browser: true
                 }
@@ -75,7 +75,16 @@ module.exports = function (grunt) {
             files: {
                 '.lt-ie8': 'dist/css/demo.css'
             }
-        }
+        },
+        karma: {
+
+            unit: {
+
+                configFile: 'karma.conf.js',
+                singleRun: true,
+                reporters: ['dots']
+            }
+        },
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -87,6 +96,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('ie-base64-protector');
+    grunt.loadNpmTasks('grunt-karma');
 
     grunt.registerTask('build', [
         'jshint',
@@ -98,6 +108,11 @@ module.exports = function (grunt) {
         'imageEmbed',
         'cssmin',
         'uglify'
+    ]);
+
+    grunt.registerTask('test', [
+        'jshint',
+        'karma'
     ]);
 
 };
