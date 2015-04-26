@@ -84,7 +84,7 @@ module.exports = function (grunt) {
                 singleRun: true,
                 reporters: ['dots']
             }
-        },
+        }
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');

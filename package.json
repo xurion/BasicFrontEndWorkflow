@@ -1,5 +1,5 @@
 {
-  "name": "Basic Front End Workflow",
+  "name": "BasicFrontEndWorkflow",
   "version": "1.0.0",
   "description": "",
   "main": "demo.html",
@@ -21,7 +21,7 @@
     "grunt-contrib-jshint": "^0.11.1",
     "grunt-contrib-less": "^1.0.1",
     "grunt-contrib-uglify": "^0.8.1",
-    "grunt-image-embed": "https://github.com/xurion/grunt-image-embed/tarball/0.3.4",
+    "grunt-image-embed": "https://github.com/xurion/grunt-image-embed/tarball/develop",
     "grunt-jslint": "^1.1.14",
     "grunt-karma": "^0.10.1",
     "ie-base64-protector": "https://github.com/xurion/ie-base64-protector/tarball/develop",
