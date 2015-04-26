@@ -9,7 +9,6 @@
     "latedef": true,
     "maxdepth": 3,
     "maxparams": 3,
-    "maxstatements": 5,
     "noarg": true,
     "nocomma": true,
     "nonbsp": true,
